@@ -3,7 +3,6 @@ package com.example.demo.service;
 import com.example.demo.dto.StudentRequest;
 import com.example.demo.dto.StudentResponse;
 import com.example.demo.dto.StudentMapper;
-//import com.example.demo.mapper.StudentMapper;
 import com.example.demo.model.Student;
 import com.example.demo.repository.StudentRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -30,11 +29,6 @@ public class StudentService {
         log.info("All students retrieved");
         return students.stream().map(studentMapper::ToResponseDTO).collect(Collectors.toList());
     }
-
-//    public Optional<StudentResponse> getStudentById(int id) {
-//        log.info("Fetching student with id {}", id);
-//        return studentRepository.findById(id).map(studentMapper::ToResponseDTO);
-//    }
 
     public Optional<StudentResponse> getStudentById(int id) {
         log.info("Fetching student with id {}", id);
